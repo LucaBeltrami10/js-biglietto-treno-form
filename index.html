@@ -15,15 +15,15 @@
         <div class="row">
             <div class="col-12 text-center">
                 <h3 class="text-uppercase mb-3">calcola il prezzo del tuo biglietto</h3>
-                <form class="rounded bc_white mx-5 py-3">
+                <form class="rounded bc_white mx-5 py-3" novalidate>
                     <div class="container-fluid d-flex justify-content-evenly ">
                         <div class="mb-3">
                             <label for="userAge" class="form-label">Inserisci la tua età</label>
-                            <input id="user-Age" type="text" class="form-control" aria-describedby="emailHelp">
+                            <input id="user-Age" type="text" class="form-control" aria-describedby="emailHelp" required>
                         </div>
                         <div class="mb-3">
                             <label for="userAge" class="form-label">Inserisci la distanza del viaggio</label>
-                            <input id="user-distance" type="text" class="form-control" aria-describedby="emailHelp">
+                            <input id="user-distance" type="text" class="form-control" aria-describedby="emailHelp" required>
                         </div>
                         <!-- <div class="mb-3">
                             <label for="userAge" class="form-label">fascia d'età</label>
@@ -54,7 +54,7 @@
                           <tr>
                             <th scope="row" class="bc_gray">Mario Rossi</th>
                             <td>Biglietto Standard</td>
-                            <td>5</td>
+                            <td id="train-carriage">5</td>
                             <td id="cp-code">92911</td>
                             <td id="ticket-cost"></td>
                           </tr>

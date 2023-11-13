@@ -10,6 +10,7 @@ inputDiscount.addEventListener('click', function(){
     /* inserite variabili dentro ricaricare sempre il loro valore all'input sul button rilevato dal listener */
     let userAge = parseInt(document.getElementById('user-Age').value)
     let userDistance = parseFloat(document.getElementById('user-distance').value)
+
     /* mostrato il valore in console */
 
     console.log(`User age: ${userAge}`)
@@ -30,6 +31,14 @@ inputDiscount.addEventListener('click', function(){
     /* mostro in console il prezzo scontato */
     console.log(`prezzo finale: ${ticketCost}`)
     console.log(`prezzo finale arrotondato: ${ticketCost.toFixed(2)}`)
+
+    /* inserisco in pagina HTML il prezzo del bilietto */
+    document.getElementById('ticket-cost').innerHTML = ticketCost.toFixed(2)
+
+    /* if (userDistance == NaN){
+        alert('necessario compilare tutti i campi del form')
+        document.getElementById('ticket-cost').innerHTML = "Non valido"
+    } */
 
 })
 
