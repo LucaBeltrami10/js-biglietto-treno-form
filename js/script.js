@@ -1,7 +1,7 @@
 
 /* quando l'utente clicca il bottone recupero i dati in console */
 /* definisco l'elemento da "ascoltare" */
-const inputDiscount = document.querySelector('main div button')
+const inputDiscount = document.getElementById('check-discount')
 
 
 /* definisco cosa rilevare e quali output produrre) */
