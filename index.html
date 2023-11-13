@@ -4,19 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js-biglietto-treno-form</title>
+    
+    <!-- link bootsrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <!-- css -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <div class="my_container container-fluid rounded mx-auto bc_red py-5">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="text-uppercase mb-3">calcola il prezzo del tuo biglietto</h3>
+                <form class="rounded bc_white mx-5 py-3">
+                    <div class="container-fluid d-flex justify-content-evenly ">
+                        <div class="mb-3">
+                            <label for="userAge" class="form-label">Inserisci la tua età</label>
+                            <input id="user-Age" type="text" class="form-control" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label for="userAge" class="form-label">Inserisci la distanza del viaggio</label>
+                            <input id="user-distance" type="text" class="form-control" aria-describedby="emailHelp">
+                        </div>
+                        <!-- <div class="mb-3">
+                            <label for="userAge" class="form-label">fascia d'età</label>
+                            <input type="text" class="form-control" aria-describedby="emailHelp">
+                        </div> -->
+                    </div>
+                    <div class="container-fluid d-flex justify-content-center">
+                        <button type="button" id="check-discount" class="btn btn-light my_button me-3">Genera</button>
+                        <button type="button" id="cancel-btn" class="btn btn-light my_button">Annulla</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 text-center">
+                <h3 class="text-uppercase mb-3">il tuo biglietto</h3>
+                <article class="rounded bc_white mx-5 py-3">
+                    <h4>dettaglio passeggeri</h4>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col" class="text-uppercase bc_gray">nome passeggero</th>
+                            <th scope="col">Offerta</th>
+                            <th scope="col">Carrozza</th>
+                            <th scope="col">Codice CP</th>
+                            <th scope="col">Costo biglietto</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row" class="bc_gray">Mario Rossi</th>
+                            <td>Biglietto Standard</td>
+                            <td>5</td>
+                            <td id="cp-code">92911</td>
+                            <td id="ticket-cost"></td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </article>
 
-    <main>
-        <div>
-            <input type="text" id="user-Age">
-            <input type="text" id="user-distance">
-            <button>Genera</button>
+            </div>
         </div>
-    </main>
+    </div>
     
     <script src="./js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
