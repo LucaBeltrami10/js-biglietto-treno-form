@@ -33,7 +33,7 @@ inputDiscount.addEventListener('click', function(){
     console.log(`prezzo finale arrotondato: ${ticketCost.toFixed(2)}`)
 
     /* inserisco in pagina HTML il prezzo del bilietto */
-    document.getElementById('ticket-cost').innerHTML = ticketCost.toFixed(2)
+    document.getElementById('ticket-cost').innerHTML = `${ticketCost.toFixed(2)} €`
 
     /* if (userDistance == NaN){
         alert('necessario compilare tutti i campi del form')
