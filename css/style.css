@@ -11,6 +11,10 @@
     background-color: #808080;
 }
 
+.cl-red{
+    color: #b91450;
+}
+
 .my_button{
     color: #b91450;
     border: 1px solid #b91450;
@@ -23,6 +27,6 @@
 }
 
 .my_container form{
-    color: red;
+    color: #b91450;
 }
 

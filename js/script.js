@@ -23,11 +23,18 @@ inputDiscount.addEventListener('click', function(){
     console.log(`prezzo intero: ${ticketCost}`)
 
     /* applico condizioni per lo sconto */
-    if(userAge >= 65){
-        ticketCost *= 0.4673
-    } else if(userAge < 18){
-        ticketCost *= 0.8235
+    if (isNaN(userAge) || isNaN(userDistance)){
+        alert('necessario compilare entrambe i campi')
+        document.getElementById('ticket-cost').innerHTML = `Necessario compilare form`
+    } else{
+        if(userAge >= 65){
+            ticketCost *= 0.4673
+        } else if(userAge < 18){
+            ticketCost *= 0.8235
+        }
     }
+
+    
     /* mostro in console il prezzo scontato */
     console.log(`prezzo finale: ${ticketCost}`)
     console.log(`prezzo finale arrotondato: ${ticketCost.toFixed(2)}`)
@@ -35,10 +42,8 @@ inputDiscount.addEventListener('click', function(){
     /* inserisco in pagina HTML il prezzo del bilietto */
     document.getElementById('ticket-cost').innerHTML = `${ticketCost.toFixed(2)} €`
 
-    /* if (userDistance == NaN){
-        alert('necessario compilare tutti i campi del form')
-        document.getElementById('ticket-cost').innerHTML = "Non valido"
-    } */
+    
+
 
 })
 
